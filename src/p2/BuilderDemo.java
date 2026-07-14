@@ -2,7 +2,7 @@ package p2;
 
 public class BuilderDemo {
     public static void main(String[] args) {
-        Student s = new StudentBuilder()
+        Student s = new StudentBuilder<Student>()
                 .setName("Anna Schmidt")
                 .setAge(22)
                 .setMatriculationNumber("12345")

@@ -1,13 +1,13 @@
 package p2;
 
-public class StudentBuilder extends PersonBuilder<StudentBuilder>{
+public class StudentBuilder<T extends Student> extends PersonBuilder<StudentBuilder<T>>{
     String matriculationNumber;
     String fieldOfStudy;
-    StudentBuilder setMatriculationNumber(String m){
+    StudentBuilder<T> setMatriculationNumber(String m){
         matriculationNumber = m;
         return this;
     }
-    StudentBuilder setFieldOfStudy(String s){
+    StudentBuilder<T> setFieldOfStudy(String s){
         fieldOfStudy = s;
         return this;
     }
