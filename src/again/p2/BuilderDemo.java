@@ -19,6 +19,7 @@ public class BuilderDemo {
         Teacher t = new TeacherBuilder().setName("Teacher").setSubject("Math").setAge(69).build();
         System.out.println(t);
         System.out.println(s);
+        Person p = new PersonBuilder<>().setAge(1).setName("").build();
 
     }
 }
