@@ -5,11 +5,11 @@ public class PersonBuilder<T extends PersonBuilder<T>>{
 
     T setName(String name){
         this.name = name;
-        return (T) this;
+        return (T)this;
     }
     T setAge(int age){
         this.age = age;
-        return (T) this;
+        return (T)this;
     }
     Person build(){
         return new Person(name,age);

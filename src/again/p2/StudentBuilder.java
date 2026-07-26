@@ -1,16 +1,16 @@
 package again.p2;
 
-public class StudentBuilder extends PersonBuilder<StudentBuilder>{
+public class StudentBuilder<T extends StudentBuilder<T>> extends PersonBuilder<T>{
     String matriculationNumber, fieldOfStudy;
 
-    public StudentBuilder setFieldOfStudy(String fieldOfStudy) {
+    public T setFieldOfStudy(String fieldOfStudy) {
         this.fieldOfStudy = fieldOfStudy;
-        return this;
+        return (T)this;
     }
 
-    public StudentBuilder setMatriculationNumber(String matriculationNumber) {
+    public T setMatriculationNumber(String matriculationNumber) {
         this.matriculationNumber = matriculationNumber;
-        return this;
+        return (T)this;
     }
     Student build(){
         return new Student(name,age,matriculationNumber,fieldOfStudy);
