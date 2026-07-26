@@ -1,0 +1,16 @@
+package again.p2;
+
+public class BuilderDemo {
+    public static void main(String[] args) {
+        Student s = new StudentBuilder()
+                .setName("Anna Schmidt")
+                .setAge(22)
+                .setMatriculationNumber("12345")
+                .setFieldOfStudy("B.Sc. Informatik")
+                .build();
+        Teacher t = new TeacherBuilder().setName("Teacher").setSubject("Math").setAge(69).build();
+        System.out.println(t);
+        System.out.println(s);
+
+    }
+}
